@@ -180,9 +180,8 @@ def LANsMain(args):
         interface = args.interface
     else:
         interface = ipr[4]
-    if 'eth' in interface or 'p3p' in interface:
-        exit(
-            '[-] Wired interface found as default route, please connect wirelessly and retry, or specify the active interface with the -i [interface] option. See active interfaces with [ip addr] or [ifconfig].')
+        if 'eth' in interface or 'p3p' in interface:
+            exit('[-] Wired interface found as default route, please connect wirelessly and retry, or specify the active interface with the -i [interface] option. See active interfaces with [ip addr] or [ifconfig].')
     if args.ipaddress:
         victimIP = args.ipaddress
     else:
